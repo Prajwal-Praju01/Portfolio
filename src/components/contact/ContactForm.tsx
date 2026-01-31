@@ -24,20 +24,46 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
     
-    // Simulate form submission
-    // In production, replace this with actual form submission logic (e.g., email service, API endpoint)
-    setTimeout(() => {
-      console.log('Form submitted:', formData)
-      setSubmitStatus('success')
-      setIsSubmitting(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
+    try {
+      // Using Formspree - Get your form ID from https://formspree.io
+      // 1. Sign up at formspree.io
+      // 2. Create a new form
+      // 3. Replace 'YOUR_FORM_ID' below with your actual form ID
+      const formspreeEndpoint = 'https://formspree.io/f/mqebogvk'
       
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle')
-      }, 5000)
-    }, 1500)
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 5000)
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Network error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

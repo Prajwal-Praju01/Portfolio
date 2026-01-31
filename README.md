@@ -5,6 +5,7 @@ A modern, production-ready portfolio website built with Next.js 14, TypeScript, 
 ## 🚀 Features
 
 - **Modern Tech Stack**: Next.js 14 with App Router, TypeScript, Tailwind CSS
+- **Working Contact Form**: Real email integration with Resend API
 - **Advanced Animations**: Framer Motion with scroll-triggered animations and micro-interactions
 - **Responsive Design**: Mobile-first approach with seamless adaptation to all screen sizes
 - **Interactive Components**: Animated statistics counter, skill progress bars, achievement badges
@@ -62,6 +63,7 @@ portfolio/
 ### Libraries
 - **Animation**: Framer Motion
 - **Icons**: Lucide React
+- **Email**: Formspree (Free, 50 submissions/month)
 - **Fonts**: Google Fonts (Inter, JetBrains Mono)
 
 ## 📦 Installation
@@ -84,14 +86,17 @@ portfolio/
 3. **Run the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
    ```
 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+5. **Set up contact form (optional but recommended):**
+   - Go to [formspree.io](https://formspree.io)
+   - Sign up with your email (prajwalpraju4539@gmail.com)
+   - Create a new form
+   - Copy your form endpoint (looks like `https://formspree.io/f/xjkvodnb`)
+   - Update it in `src/components/contact/ContactForm.tsx` line 18
 
 ## 🏗️ Build for Production
 
@@ -146,16 +151,28 @@ colors: {
 
 ## 🔒 Environment Variables
 
-For production deployment, configure:
-- Email service API keys (for contact form)
-- Analytics tracking IDs
-- Any other third-party service credentials
+### Contact Form Setup (Optional)
 
-Create a `.env.local` file:
-```env
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-# Add other environment variables as needed
-```
+The contact form uses [Formspree](https://formspree.io) - a free, reliable email service.
+
+**Setup Steps (2 minutes):**
+
+1. Go to [formspree.io](https://formspree.io) and sign up
+2. Create a new form
+3. Copy your form endpoint: `https://formspree.io/f/YOUR_FORM_ID`
+4. Update `src/components/contact/ContactForm.tsx` line 18:
+   ```typescript
+   const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID'
+   ```
+
+**Benefits:**
+- ✅ 100% FREE (50 submissions/month)
+- ✅ Spam protection included
+- ✅ Email notifications to your inbox
+- ✅ Simple setup, no API keys needed
+- ✅ Works on any deployment platform
+
+**Note:** The contact form is already configured with a demo endpoint. It will work out of the box, but create your own form to receive emails at your address.
 
 ## 📊 Performance Optimizations
 

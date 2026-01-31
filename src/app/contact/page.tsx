@@ -135,14 +135,6 @@ export default function ContactPage() {
                 </h2>
                 <ContactForm />
               </div>
-
-              {/* Additional Note */}
-              <div className="mt-6 p-4 bg-primary-50 border border-primary-200 rounded-lg">
-                <p className="text-sm text-primary-900">
-                  <strong>Note:</strong> This form is currently set up for demonstration purposes. 
-                  In production, it will be connected to an email service or backend API to process submissions.
-                </p>
-              </div>
             </div>
           </div>
         </Container>
