@@ -45,7 +45,7 @@ const CTA = () => {
               <Button 
                 variant="secondary" 
                 size="lg" 
-                className="gap-2 bg-white text-primary-700 hover:bg-primary-50 hover:shadow-2xl hover:scale-105 transition-all w-full sm:w-auto"
+                className="gap-2 bg-white !text-primary-700 hover:bg-primary-50 hover:shadow-2xl hover:scale-105 transition-all w-full sm:w-auto"
               >
                 Get In Touch
                 <ArrowRight size={20} />
@@ -55,7 +55,7 @@ const CTA = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="gap-2 border-2 border-white text-white hover:bg-white hover:text-primary-700 hover:scale-105 transition-all w-full sm:w-auto"
+                className="gap-2 border-2 border-white !text-white hover:bg-white hover:!text-primary-700 hover:scale-105 transition-all w-full sm:w-auto"
               >
                 View Resume
               </Button>

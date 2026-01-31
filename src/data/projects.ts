@@ -152,6 +152,11 @@ export const projectsData: Project[] = [
     links: {
       github: 'https://github.com/Prajwal-Praju01/drone-surveillance',
     },
+    images: [
+      '/projects/ai-drone-surveillance/screenshot-1.png',
+      '/projects/ai-drone-surveillance/screenshot-2.png',
+      '/projects/ai-drone-surveillance/screenshot-3.png',
+    ],
     year: '2025',
   },
   {
@@ -218,6 +223,10 @@ export const projectsData: Project[] = [
     links: {
       github: 'https://github.com/Prajwal-Praju01/sanjeevani',
     },
+    images: [
+      '/projects/sanjeevani-healthcare/screenshot-1.png',
+      '/projects/sanjeevani-healthcare/screenshot-2.png',
+    ],
     year: '2025',
   },
 ]
