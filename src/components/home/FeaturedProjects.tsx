@@ -40,7 +40,8 @@ const FeaturedProjects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
-              <Link href={`/projects/${project.id}`}>\n                <div className="bg-white rounded-xl overflow-hidden h-full border-2 border-dark-200 hover:border-primary-500 transition-all hover:shadow-2xl group relative">
+              <Link href={`/projects/${project.id}`}>
+                <div className="bg-white rounded-xl overflow-hidden h-full border-2 border-dark-200 hover:border-primary-500 transition-all hover:shadow-2xl group relative">
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity z-0"></div>
                   
