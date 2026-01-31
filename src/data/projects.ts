@@ -150,7 +150,7 @@ export const projectsData: Project[] = [
       'Cloud-ready deployment with Gunicorn WSGI server, environment variable configuration, and compatibility with Render, Heroku, and Railway platforms',
     ],
     links: {
-      github: 'https://github.com/Prajwal-Praju01/drone-surveillance',
+      github: 'https://github.com/Prajwal-Praju01/AI-based_Drone_Surveillance_System',
     },
     images: [
       '/projects/ai-drone-surveillance/screenshot-1.png',
