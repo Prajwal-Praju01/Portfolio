@@ -222,6 +222,7 @@ export const projectsData: Project[] = [
     ],
     links: {
       github: 'https://github.com/Prajwal-Praju01/sanjeevani',
+      live: 'https://sanjeevani032.netlify.app/',
     },
     images: [
       '/projects/sanjeevani-healthcare/screenshot-1.png',
