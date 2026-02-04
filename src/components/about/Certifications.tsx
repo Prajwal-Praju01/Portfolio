@@ -5,22 +5,22 @@ import { Award, CheckCircle } from 'lucide-react'
 
 const certifications = [
   {
-    title: 'Full-Stack Web Development',
-    issuer: 'Online Learning Platform',
-    year: '2024',
-    skills: ['React', 'Node.js', 'MongoDB'],
+    title: 'Web Development Fundamentals',
+    issuer: 'IBM SkillsBuild',
+    year: 'Mar 2025',
+    skills: ['HTML', 'CSS', 'JavaScript'],
   },
   {
-    title: 'Machine Learning Specialization',
-    issuer: 'Coursera',
-    year: '2024',
-    skills: ['PyTorch', 'Deep Learning', 'Computer Vision'],
+    title: 'Geodata Processing using Python and Machine Learning',
+    issuer: 'IIRS Outreach Programme, ISRO',
+    year: 'April 2025',
+    skills: ['Python', 'Machine Learning', 'Geospatial Analysis'],
   },
   {
-    title: 'Advanced JavaScript & TypeScript',
-    issuer: 'Udemy',
-    year: '2023',
-    skills: ['TypeScript', 'ES6+', 'Async Programming'],
+    title: 'SENTINEL HACK 5.0',
+    issuer: 'K.S. Institute of Technology',
+    year: 'April 2025',
+    skills: ['Hackathon', 'Problem Solving', 'Team Collaboration'],
   },
 ]
 

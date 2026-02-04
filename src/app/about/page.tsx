@@ -25,9 +25,9 @@ const skills = {
 
 const experience = [
   {
-    title: 'Software Development Intern',
+    title: 'Fullstack development',
     organization: 'Defense Research Organization',
-    duration: 'Sep 2024 - Nov 2024 (2 months)',
+    duration: 'Sep 2025 - Nov 2025 (2 months)',
     location: 'Bangalore, India',
     description: [
       'Developed AI-powered drone surveillance system with real-time object detection using YOLOv8',
