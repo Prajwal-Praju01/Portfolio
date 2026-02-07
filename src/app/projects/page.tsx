@@ -1,6 +1,5 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
@@ -141,7 +140,7 @@ export default function ProjectsPage() {
           className="mt-16 text-center p-8 bg-dark-50 rounded-lg border-2 border-dashed border-dark-300 hover:border-primary-400 hover:bg-primary-50/50 transition-all duration-300"
         >
           <p className="text-dark-600 text-lg">
-            More projects coming soon! I'm constantly working on new ideas and solutions.
+            More projects coming soon! I&apos;m constantly working on new ideas and solutions.
           </p>
         </motion.div>
       </Container>

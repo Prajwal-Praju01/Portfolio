@@ -290,7 +290,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             Interested in learning more?
           </h2>
           <p className="text-dark-600 mb-6">
-            I'd love to discuss this project in detail and share insights about the development process.
+            I&apos;d love to discuss this project in detail and share insights about the development process.
           </p>
           <Link href="/contact">
             <Button size="lg" className="gap-2">

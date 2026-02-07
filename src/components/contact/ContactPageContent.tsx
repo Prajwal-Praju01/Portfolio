@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { Mail, Linkedin, Github, MapPin, Phone, Download } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Container from '@/components/ui/Container'
@@ -48,12 +47,12 @@ export default function ContactPageContent() {
         <Container size="md">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </h1>
             <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
             <p className="text-xl text-dark-600 max-w-2xl mx-auto">
-              Have a project in mind or looking for a developer? I'd love to hear from you. 
-              Drop me a message and I'll get back to you as soon as possible.
+              Have a project in mind or looking for a developer? I&apos;d love to hear from you. 
+              Drop me a message and I&apos;ll get back to you as soon as possible.
             </p>
           </div>
         </Container>
@@ -73,7 +72,7 @@ export default function ContactPageContent() {
                 Get In Touch
               </h2>
               <p className="text-dark-700 mb-8 leading-relaxed">
-                I'm currently open to internship and entry-level opportunities in Full-Stack Development. 
+                I&apos;m currently open to internship and entry-level opportunities in Full-Stack Development. 
                 Whether you have a question, want to discuss a project, or just want to connect, 
                 feel free to reach out through any of the channels below.
               </p>
@@ -129,7 +128,7 @@ export default function ContactPageContent() {
                       Available for opportunities
                     </p>
                     <p className="text-sm text-green-700">
-                      I'm currently seeking internship and entry-level roles. 
+                      I&apos;m currently seeking internship and entry-level roles. 
                       I typically respond within 24 hours.
                     </p>
                   </div>
@@ -168,7 +167,7 @@ export default function ContactPageContent() {
               Prefer Social Media?
             </h2>
             <p className="text-dark-600 mb-8">
-              Connect with me on your preferred platform. I'm active on LinkedIn and GitHub.
+              Connect with me on your preferred platform. I&apos;m active on LinkedIn and GitHub.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
               <motion.a

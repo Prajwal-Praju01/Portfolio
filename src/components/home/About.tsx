@@ -53,7 +53,7 @@ const About = () => {
             className="prose prose-lg max-w-none mb-12"
           >
             <p className="text-dark-700 text-lg leading-relaxed mb-4">
-              I'm a Full-Stack Web Developer with hands-on experience in React-based frontends, 
+              I&apos;m a Full-Stack Web Developer with hands-on experience in React-based frontends, 
               Python backend frameworks, secure authentication, and AI-powered systems. 
               I enjoy building real-world applications that solve meaningful problems.
             </p>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Send } from 'lucide-react'
+import { Send } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
 const ContactForm = () => {
@@ -160,7 +160,7 @@ const ContactForm = () => {
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
           <p className="font-medium">✓ Message sent successfully!</p>
-          <p className="text-sm mt-1">Thank you for reaching out. I'll get back to you soon.</p>
+          <p className="text-sm mt-1">Thank you for reaching out. I&apos;ll get back to you soon.</p>
         </div>
       )}
 

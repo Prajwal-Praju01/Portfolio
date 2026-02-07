@@ -34,10 +34,10 @@ const CTA = () => {
             💼 Open for Opportunities
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Let's Build Something Great Together
+            Let&apos;s Build Something Great Together
           </h2>
           <p className="text-lg md:text-xl text-primary-100 mb-8 leading-relaxed">
-            I'm actively seeking internship and entry-level opportunities where I can 
+            I&apos;m actively seeking internship and entry-level opportunities where I can 
             contribute to impactful projects, work with talented teams, and continue growing as a developer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

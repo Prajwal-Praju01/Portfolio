@@ -89,20 +89,20 @@ export default function AboutPageContent() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-lg text-dark-700 leading-relaxed mb-4">
-              I'm Prajwal B N, a Full-Stack Web Developer with hands-on experience in building 
+              I&apos;m Prajwal B N, a Full-Stack Web Developer with hands-on experience in building 
               production-ready applications that combine modern web technologies with AI/ML capabilities. 
               My journey in software development has been driven by a passion for creating solutions 
               that make a real difference.
             </p>
             <p className="text-lg text-dark-700 leading-relaxed mb-4">
               With expertise spanning React-based frontends, Python backend frameworks, and AI/ML integration, 
-              I've successfully delivered projects ranging from real-time drone surveillance systems to 
+              I&apos;ve successfully delivered projects ranging from real-time drone surveillance systems to 
               healthcare platforms managing thousands of records. I thrive in environments where I can 
               learn, contribute, and build systems that scale.
             </p>
             <p className="text-lg text-dark-700 leading-relaxed">
               I believe in writing clean, maintainable code and staying up-to-date with the latest 
-              technologies. Whether it's implementing secure authentication systems, optimizing 
+              technologies. Whether it&apos;s implementing secure authentication systems, optimizing 
               database queries, or building intuitive user interfaces, I approach every challenge 
               with curiosity and determination.
             </p>
@@ -380,12 +380,12 @@ export default function AboutPageContent() {
             className="bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-xl p-8 md:p-12 text-center hover:shadow-2xl transition-shadow"
           >
             <h2 className="text-3xl font-bold mb-4">
-              What I'm Looking For
+              What I&apos;m Looking For
             </h2>
             <p className="text-lg text-primary-100 mb-6 max-w-2xl mx-auto">
-              I'm actively seeking internship and entry-level opportunities where I can contribute 
+              I&apos;m actively seeking internship and entry-level opportunities where I can contribute 
               to impactful projects, collaborate with experienced teams, and continue growing as a 
-              Full-Stack Developer. I'm particularly interested in roles involving modern web technologies, 
+              Full-Stack Developer. I&apos;m particularly interested in roles involving modern web technologies, 
               AI/ML integration, and scalable system design.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-8">
