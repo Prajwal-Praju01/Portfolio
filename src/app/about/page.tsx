@@ -1,17 +1,15 @@
+'use client'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Briefcase, GraduationCap, Download, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import Container from '@/components/ui/Container'
 import Section from '@/components/ui/Section'
 import SkillBadge from '@/components/ui/SkillBadge'
 import Button from '@/components/ui/Button'
 import SkillsProgress from '@/components/about/SkillsProgress'
 import Certifications from '@/components/about/Certifications'
-
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'Learn more about Prajwal B N, a Full-Stack Web Developer with expertise in React, Next.js, FastAPI, and AI/ML integration.',
-}
 
 const skills = {
   languages: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3', 'C', 'Java'],
@@ -58,23 +56,39 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Section className="pt-24 pb-12 bg-gradient-to-b from-primary-50 to-white">
         <Container size="md">
-          <div className="text-center mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-8"
+          >
             <h1 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
               About Me
             </h1>
-            <div className="w-20 h-1 bg-primary-600 mx-auto mb-6"></div>
+            <motion.div
+              className="w-20 h-1 bg-primary-600 mx-auto mb-6"
+              initial={{ width: 0 }}
+              animate={{ width: 80 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            ></motion.div>
             <p className="text-xl text-dark-600 max-w-2xl mx-auto">
               A passionate Full-Stack Developer dedicated to building impactful, 
               scalable web applications that solve real-world problems.
             </p>
-          </div>
+          </motion.div>
         </Container>
       </Section>
 
       {/* Introduction */}
       <Section className="py-12">
         <Container size="md">
-          <div className="prose prose-lg max-w-none">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="prose prose-lg max-w-none"
+          >
             <p className="text-lg text-dark-700 leading-relaxed mb-4">
               I'm Prajwal B N, a Full-Stack Web Developer with hands-on experience in building 
               production-ready applications that combine modern web technologies with AI/ML capabilities. 
@@ -93,7 +107,7 @@ export default function AboutPage() {
               database queries, or building intuitive user interfaces, I approach every challenge 
               with curiosity and determination.
             </p>
-          </div>
+          </motion.div>
         </Container>
       </Section>
 
@@ -101,13 +115,24 @@ export default function AboutPage() {
       <Section className="py-12 bg-dark-50">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-dark-900 mb-8 text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold text-dark-900 mb-8 text-center"
+            >
               Technical Skills
-            </h2>
+            </motion.h2>
 
             <div className="space-y-8">
               {/* Languages */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-red-500 rounded-full"></span>
                   Programming Languages
@@ -115,12 +140,17 @@ export default function AboutPage() {
                 <div className="flex flex-wrap gap-3">
                   {skills.languages.map((skill) => (
                     <SkillBadge key={skill} skill={skill} category="languages" />
-                  ))}
+                  ))}  
                 </div>
-              </div>
+              </motion.div>
 
               {/* Frontend */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
                   Frontend Development
@@ -130,10 +160,15 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="frontend" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Backend */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                   Backend Development
@@ -143,10 +178,15 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="backend" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Database */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
                   Databases
@@ -156,10 +196,15 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="database" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* AI/ML */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
                   AI/ML & Data Science
@@ -169,10 +214,15 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="ai" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Tools */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-gray-500 rounded-full"></span>
                   Tools & Technologies
@@ -182,10 +232,15 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="tools" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Cloud */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
                 <h3 className="text-xl font-semibold text-dark-900 mb-4 flex items-center gap-2">
                   <span className="w-3 h-3 bg-cyan-500 rounded-full"></span>
                   Cloud & Deployment
@@ -195,7 +250,7 @@ export default function AboutPage() {
                     <SkillBadge key={skill} skill={skill} category="cloud" />
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </Container>
@@ -214,16 +269,26 @@ export default function AboutPage() {
       {/* Experience Section */}
       <Section className="py-12">
         <Container size="md">
-          <h2 className="text-3xl font-bold text-dark-900 mb-8 flex items-center justify-center gap-3">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold text-dark-900 mb-8 flex items-center justify-center gap-3"
+          >
             <Briefcase className="text-primary-600" size={32} />
             Experience
-          </h2>
+          </motion.h2>
 
           <div className="space-y-8">
             {experience.map((exp, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-md"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                className="bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
@@ -247,7 +312,7 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </Container>
@@ -256,16 +321,26 @@ export default function AboutPage() {
       {/* Education Section */}
       <Section className="py-12 bg-dark-50">
         <Container size="md">
-          <h2 className="text-3xl font-bold text-dark-900 mb-8 flex items-center justify-center gap-3">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold text-dark-900 mb-8 flex items-center justify-center gap-3"
+          >
             <GraduationCap className="text-primary-600" size={32} />
             Education
-          </h2>
+          </motion.h2>
 
           <div className="space-y-8">
             {education.map((edu, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white border-l-4 border-green-600 p-6 rounded-r-lg shadow-md"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                className="bg-white border-l-4 border-green-600 p-6 rounded-r-lg shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div>
@@ -289,7 +364,7 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </Container>
@@ -298,7 +373,13 @@ export default function AboutPage() {
       {/* What I'm Looking For */}
       <Section className="py-12">
         <Container size="md">
-          <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-xl p-8 md:p-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-xl p-8 md:p-12 text-center hover:shadow-2xl transition-shadow"
+          >
             <h2 className="text-3xl font-bold mb-4">
               What I'm Looking For
             </h2>
@@ -341,7 +422,7 @@ export default function AboutPage() {
                 </Button>
               </a>
             </div>
-          </div>
+          </motion.div>
         </Container>
       </Section>
     </>

@@ -1,8 +1,11 @@
+'use client'
+
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, Github, ExternalLink, Calendar } from 'lucide-react'
+import { motion } from 'framer-motion'
 import Container from '@/components/ui/Container'
 import Section from '@/components/ui/Section'
 import Button from '@/components/ui/Button'
@@ -48,16 +51,27 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     <Section className="pt-24 pb-16">
       <Container size="md">
         {/* Back Button */}
-        <Link 
-          href="/projects" 
-          className="inline-flex items-center gap-2 text-dark-600 hover:text-primary-600 transition-colors mb-8"
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4 }}
         >
-          <ArrowLeft size={20} />
-          Back to Projects
-        </Link>
+          <Link 
+            href="/projects" 
+            className="inline-flex items-center gap-2 text-dark-600 hover:text-primary-600 transition-colors mb-8"
+          >
+            <ArrowLeft size={20} />
+            Back to Projects
+          </Link>
+        </motion.div>
 
         {/* Project Header */}
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12"
+        >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-sm font-medium text-primary-600 bg-primary-50 px-3 py-1 rounded-full flex items-center gap-2">
               <Calendar size={14} />
@@ -104,16 +118,24 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               )}
             </div>
           )}
-        </div>
+        </motion.div>
 
         {/* Project Images */}
         {project.images && project.images.length > 0 ? (
-          <div className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12"
+          >
             <div className="grid grid-cols-1 gap-6">
               {project.images.map((image, index) => (
-                <div 
-                  key={index} 
-                  className="relative w-full rounded-xl overflow-hidden border border-dark-200 shadow-lg hover:shadow-xl transition-shadow"
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="relative w-full rounded-xl overflow-hidden border border-dark-200 shadow-lg hover:shadow-2xl transition-shadow"
                 >
                   <Image
                     src={image}
@@ -123,62 +145,108 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     className="w-full h-auto"
                     priority={index === 0}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ) : (
-          <div className="mb-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl aspect-video flex items-center justify-center border border-primary-300">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mb-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl aspect-video flex items-center justify-center border border-primary-300"
+          >
             <p className="text-primary-700 font-medium">Project Screenshots Coming Soon</p>
-          </div>
+          </motion.div>
         )}
 
         {/* Overview */}
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-4">Overview</h2>
           <p className="text-dark-700 text-lg leading-relaxed">
             {project.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Problem Statement */}
-        <div className="mb-12 p-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 p-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg hover:shadow-lg transition-shadow"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-4">The Problem</h2>
           <p className="text-dark-700 leading-relaxed">
             {project.problem}
           </p>
-        </div>
+        </motion.div>
 
         {/* Solution */}
-        <div className="mb-12 p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg hover:shadow-lg transition-shadow"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-4">The Solution</h2>
           <p className="text-dark-700 leading-relaxed">
             {project.solution}
           </p>
-        </div>
+        </motion.div>
 
         {/* Key Features */}
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-6">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {project.features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="flex items-start gap-3 p-4 bg-white border border-dark-200 rounded-lg hover:border-primary-400 transition-colors"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex items-start gap-3 p-4 bg-white border border-dark-200 rounded-lg hover:border-primary-400 hover:shadow-md transition-all"
               >
                 <span className="text-primary-600 font-bold mt-1">✓</span>
                 <span className="text-dark-700">{feature}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Technology Stack */}
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-6">Technology Stack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {project.technologies.map((tech, index) => (
-              <div key={index} className="bg-white border border-dark-200 rounded-lg p-6">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white border border-dark-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+              >
                 <h3 className="text-lg font-semibold text-dark-900 mb-4">
                   {tech.category}
                 </h3>
@@ -192,28 +260,47 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Outcomes */}
-        <div className="mb-12 p-8 bg-primary-50 border border-primary-200 rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 p-8 bg-primary-50 border border-primary-200 rounded-xl hover:shadow-xl transition-shadow"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-6">Key Outcomes & Impact</h2>
           <ul className="space-y-4">
             {project.outcomes.map((outcome, index) => (
-              <li key={index} className="flex items-start gap-3">
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="flex items-start gap-3"
+              >
                 <span className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {index + 1}
                 </span>
                 <span className="text-dark-700 text-lg pt-1">{outcome}</span>
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center p-8 bg-dark-50 rounded-lg border border-dark-200">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center p-8 bg-dark-50 rounded-lg border border-dark-200 hover:shadow-lg transition-shadow"
+        >
           <h2 className="text-2xl font-bold text-dark-900 mb-4">
             Interested in learning more?
           </h2>
@@ -226,7 +313,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <ArrowLeft size={20} className="rotate-180" />
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </Container>
     </Section>
   )
