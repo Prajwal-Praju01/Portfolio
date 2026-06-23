@@ -207,7 +207,7 @@ export default function ContactPageContent() {
               <p className="text-dark-700 mb-4 font-medium">
                 Want to see my complete background and experience?
               </p>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <a href="/Prajwal_Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block">
                 <button className="flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all shadow-md hover:shadow-xl font-semibold">
                   <Download size={24} />
                   <span>Download My Resume</span>

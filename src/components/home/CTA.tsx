@@ -51,7 +51,7 @@ const CTA = () => {
                 <ArrowRight size={20} />
               </Button>
             </Link>
-            <Link href="/resume.pdf" target="_blank">
+            <Link href="/Prajwal_Resume.pdf" target="_blank">
               <Button 
                 variant="outline" 
                 size="lg" 

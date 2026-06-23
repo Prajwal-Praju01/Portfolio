@@ -410,7 +410,7 @@ export default function AboutPageContent() {
                   <ArrowRight size={20} />
                 </Button>
               </Link>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Prajwal_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button 
                   variant="outline" 
                   size="lg" 

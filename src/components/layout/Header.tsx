@@ -53,7 +53,7 @@ const Header = () => {
                 </Link>
               )
             })}
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Prajwal_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm" className="gap-2">
                 <Download size={16} />
                 Resume
@@ -99,7 +99,7 @@ const Header = () => {
                   )
                 })}
                 <a 
-                  href="/resume.pdf" 
+                  href="/Prajwal_Resume.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"
